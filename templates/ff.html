@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+        <title>Graphs</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Catamaran&display=swap" rel="stylesheet">
+</head>
+<style>
+    *{
+			margin: 0; padding: 0;
+		}
+
+    body
+    	{
+    	margin: 0;
+    	padding: 0;
+    	/* background: url('static/bg3.jpeg') no-repeat center center fixed; */
+    	font-family: 'Open Sans', sans-serif;
+       }
+.header{
+            padding: 4px;
+            margin-left: 20px
+			border: 1px solid hidden;
+			font-size: 50px;
+			background: red;  /* fallback for old browsers */
+			background: linear-gradient(to left, pink, maroon); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+			color: white;
+			text-align: center;
+			font-style: none;
+}
+table{
+    border: 1px solid black;
+}
+
+.img1{
+margin-left: 100px;
+margin-top: 60px;
+}
+.img2{
+margin-top: 60px;
+margin-left: 100px;
+}
+.img3{
+margin-top: 60px;
+margin-left: 100px;
+}
+
+.img4{
+margin-top: 20px;
+margin-left: 450px;
+margin-right: 100px;
+}
+
+</style>
+<body>
+<h1 class="header">This area is safe</h1>
+<img class="img1" src='static/images/safe.jpg'  height=270px width=320px>
+
+<img class="img2" src='static/images/download.jpg'  height=270px width=290px>
+
+<img class="img3" src='static/images/crimefree.jpg'  height=270px width=300px>
+<br>
+<br>
+<img class="img4" src='static/images/Nocrime.png'  height=220px width=550px>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+        <title>Graphs</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Catamaran&display=swap" rel="stylesheet">
+</head>
+<style>
+    *{
+			margin: 0; padding: 0;
+		}
+
+    body
+    	{
+    	margin: 0;
+    	padding: 0;
+    	/* background: url('static/bg3.jpeg') no-repeat center center fixed; */
+    	font-family: 'Open Sans', sans-serif;
+       }
+.header{
+            padding: 4px;
+            margin-left: 20px
+			border: 1px solid hidden;
+			font-size: 50px;
+			background: red;  /* fallback for old browsers */
+			background: linear-gradient(to left, pink, maroon); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+			color: white;
+			text-align: center;
+			font-style: none;
+}
+table{
+    border: 1px solid black;
+}
+</style>
+<body>
+<h1 class="header">{{name}}</h1>
+<table border="1">
+    <tr>
+        <td width="512" height="384">
+            <img src='static/images/Top5offenceperday.jpg' alt="Chart" height=400px width=710px>
+        </td>
+        <td width="512" height="384">
+            <img src='static/images/Crimespermonth.jpg' alt="Chart"height=400px width=710px>
+        </td>
+    </tr>
+    <tr>
+        <td width="512" height="384">
+            <img src='static/images/Averagecrimesdaily.jpg' alt="Chart" height=400px width=710px>
+        </td>
+        <td width="512" height="384">
+            <img src='static/images/Proportioncrimeday.jpg' alt="Chart" height=400px width=710px>
+        </td>
+    </tr>
+    </tr>
+    <tr>
+        <td width="512" height="384">
+            <img src='static/images/commoncrimes.jpg' alt="Chart" height=400px width=710px>
+        </td>
+    </tr>
+</table>
+</body>
+</html>

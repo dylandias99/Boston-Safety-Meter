@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en" class=" js no-touch">
+
+<head>
+  <title>Boston Crime </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+ <link href="https://fonts.googleapis.com/css?family=Open+Sans:300&display=swap" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css?family=Catamaran&display=swap" rel="stylesheet">
+</head>
+<style>
+	*{ 
+			margin: 0; padding: 0; 
+		}
+		
+body 
+		{
+			margin: 0;
+			padding: 0;
+			/* background: url('static/bg3.jpeg') no-repeat center center fixed; */
+			font-family: 'Open Sans', sans-serif;	
+    	}
+    	
+.navBar{
+			margin:0;
+			width: 100%;
+			height: 100px;			
+		}
+
+.header{
+			padding: 4px;
+			border: 1px solid hidden;
+			font-size: 50px;
+			background: red;  /* fallback for old browsers */
+			background: linear-gradient(to left, pink, maroon); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+			color: white;
+			text-align: center;
+		}
+		
+.ml-container {
+			margin-top: 100px;
+			display: flex;
+			justify-content: center;
+		}
+		
+input[type=text]
+		{
+			margin-left:10px;
+			width: 80%;
+			box-sizing: border-box;
+			border: 2px solid #ccc;
+			border-radius: 4px;
+			font-size: 16px;
+			background-color: white;
+			border: 4px solid #f1843a;
+			padding: 12px 20px 12px 40px;
+		}
+		
+.searchbutton{
+			margin-top: 10px;
+			padding: 9px;
+			width: 120px;
+			border-radius: 5px;
+			background: maroon;  /* fallback for old browsers */
+			color: white;
+			font-size: 20px;
+			border: 4px solid black;
+		}
+		
+.searchbutton:hover{
+			background: #009FFF;  /* fallback for old browsers */
+			background: linear-gradient(to left, #ec2F4B, #009FFF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+		}
+
+.graph{
+			margin-top: 10px;
+			margin-left: 10px;
+			padding: 9px;
+			width: 120px;
+			border-radius: 5px;
+			background: maroon;  /* fallback for old browsers */
+			color: white;
+			font-size: 20px;
+		}
+
+.graph:hover{
+			background: #009FFF;  /* fallback for old browsers */
+			background: linear-gradient(to left, pink, white); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+			color:black;
+		}
+
+.map1{
+			margin-top: 10px;
+			margin-left: 10px;
+			padding: 9px;
+			width: 120px;
+			border-radius: 5px;
+			background: maroon;  /* fallback for old browsers */
+			color: white;
+			font-size: 20px;
+		}
+
+.map1:hover{
+			background: #009FFF;  /* fallback for old browsers */
+			background: linear-gradient(to left, pink, white); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+			color:black;}
+.submit{
+
+			margin-left: 10px;
+			padding: 9px;
+			width: 120px;
+			border-radius: 5px;
+			background: maroon;  /* fallback for old browsers */
+			color: white;
+			font-size: 20px;
+}
+.submit:hover{
+			background: #009FFF;  /* fallback for old browsers */
+			background: linear-gradient(to left, pink, white); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+			color:black;
+}
+.map2{
+			margin-top:10px;
+			margin-left: 10px;
+			padding: 9px;
+			width: 140px;
+			border-radius: 5px;
+			background: maroon;  /* fallback for old browsers */
+			color: white;
+			font-size: 20px;
+		}
+
+.map2:hover{
+			background: #009FFF;  /* fallback for old browsers */
+			background: linear-gradient(to left, pink, white); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+			color:black;}
+.options{
+			margin-top:10px;
+}
+
+.crimelabel{
+			font-family: 'Open Sans', sans-serif;
+			color:white;
+			border: 1px sold black;
+			background-color: maroon;
+			border-radius: 5px;
+			padding: 9px;
+			width: 140px;
+}
+.Boston{
+color:white;
+background-color: maroon;
+}
+.Boston1{
+color:white;
+background-color: maroon;
+}
+.Boston2{
+color:white;
+background-color: maroon;
+}
+.Boston3{
+color:white;
+background-color: maroon;
+}
+</style>
+
+<body>
+ <div class="navbar">
+ <h1 class="header">Boston Safety Meter</h1>
+ </div>
+
+	<div class="ml-container" style="text-align:center">
+
+		<form class= "options" action="info" method="POST">
+			<label class="crimelabel">Search Crimes committed in area</label>
+				<select name = "Boston" class="Boston", id="BostonCrimes">
+					<option value="cars">Select district</option>
+						<option value="A1">A1</option>
+						<option value="A7">A7</option>
+						<option value="A15">A15</option>
+						<option value="B2">B2</option>
+						<option value="B3">B3</option>
+						<option value="C6">C6</option>
+						<option value="C11">C11</option>
+						<option value="D4">D4</option>
+						<option value="D14">D14</option>
+						<option value="E5">E5</option>
+						<option value="E13">E13</option>
+						<option value="E18">E18</option>
+				</select>
+				<select name = "Boston1" class="Boston1"id="BostonCrimes1">
+					<option value="car1">Select Morning</option>
+						<option value="True">True</option>
+						<option value="False">False</option>
+				</select>
+				<select name = "Boston2" class="Boston2" id="BostonCrimes2">
+					<option value="car2">Select Weekend</option>
+						<option value="True">True</option>
+						<option value="False">False</option>
+				</select>
+				<select name = "Boston3" class="Boston3" id="BostonCrimes3">
+					<option value="car3">Select Month</option>
+						<option value="1">January</option>
+						<option value="2">Feburary</option>
+						<option value="3">March</option>
+						<option value="4">April</option>
+						<option value="5">May</option>
+						<option value="6">June</option>
+						<option value="7">July</option>
+						<option value="8">August</option>
+						<option value="9">September</option>
+						<option value="10">October</option>
+						<option value="11">November</option>
+						<option value="12">December</option>
+				</select>
+				<input class="submit" type="submit" value="Submit" align="center">
+		</form>
+
+		<form action="graph" class="formgraph" method="POST">
+				<input class="graph" type="submit" value="Graphs" align="center">
+		</form>
+
+		<form action="map1" class="formmap1" method="POST">
+				<input class="map1" type="submit" value="Top Crime" align="center">
+		</form>
+
+		<form action="map2" class="formmap2"method="POST">
+				<input class="map2" type="submit" value="District Crime" align="center">
+		</form>
+		  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDaCrVAlIcYwul225dh_VepY01GNj2dlgo&callback=initMap" type="text/javascript"></script>
+</div>
+</body>
+
+</html>
