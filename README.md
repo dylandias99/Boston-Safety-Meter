@@ -8,6 +8,9 @@
 ## Installation
 
 ## Built With
+* Python
+* Html
+* CSS
 
 ## Working
 
@@ -15,3 +18,5 @@
 
 
 ## Screenshots
+### Web Interface:
+<img src="Images/terminal.png" alt="Web Interface">
