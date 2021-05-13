@@ -22,13 +22,21 @@ Neighborhood safety is a must when determining a location to buy a house. People
 * CSS
 
 ## Working
-* Flask has been used to make a web application 
+* Flask has been used to make a web application.
 
-* UI has been designed using HTML/CSS
+* UI has been designed using HTML/CSS.
 
-* The coding environment is in python
+* The coding environment is in python.
 
-* Making use of the time of the day (morning, evening, night), the area , the areas have been classified
+* Making use of the time of the day (morning, evening, night), the area , the areas have been classified.
+
+* First run Graphs.py.
+
+* Then run Testing.py and click on the link in the terminal. 
+
+* On the web interface you need to select the areas and then click on submit.
+
+* You can even click on the other buttons to view certain graphs.
 
 ## Developers
 * Dylan Dias - @dylandias99 - https://github.com/dylandias99
